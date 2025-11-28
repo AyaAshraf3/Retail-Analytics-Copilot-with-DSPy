@@ -1,0 +1,230 @@
+2025-11-28 03:09:11,629 - __main__ - INFO - Logging to: logs\nl2sql_optimization_20251128_030911.log
+2025-11-28 03:09:11,629 - __main__ - INFO - ================================================================================
+2025-11-28 03:09:11,629 - __main__ - INFO - DSPy NL2SQL Optimization - BootstrapFewShot
+2025-11-28 03:09:11,629 - __main__ - INFO - ================================================================================
+2025-11-28 03:09:11,629 - __main__ - INFO - [OK] DSPy configured with Ollama
+2025-11-28 03:09:11,630 - __main__ - INFO - [OK] Imported NLToSQLModule from agent.dspy_signatures
+2025-11-28 03:09:11,630 - agent.tools.sqlite_tool - INFO - Connected to database: D:\Retail Analytics Copilot\data\northwind.sqlite
+2025-11-28 03:09:11,943 - agent.tools.sqlite_tool - INFO - Database connection closed
+2025-11-28 03:09:11,943 - __main__ - INFO - [OK] Created training set with 10 examples
+2025-11-28 03:09:11,943 - __main__ - INFO - 
+================================================================================
+2025-11-28 03:09:11,944 - __main__ - INFO - BEFORE: Unoptimized NL2SQL Module
+2025-11-28 03:09:11,944 - __main__ - INFO - ================================================================================
+2025-11-28 03:10:36,402 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"
+2025-11-28 03:10:38,503 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-11-28 03:10:38,506 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-11-28 03:10:38,526 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-11-28 03:10:38,535 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-11-28 03:10:38,543 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-11-28 03:10:38,559 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-11-28 03:11:23,172 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"
+2025-11-28 03:11:25,247 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-11-28 03:11:25,249 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-11-28 03:11:25,257 - agent.dspy_signatures - INFO - [Attempt 1/3] Generated SQL: SELECT c.CategoryName, SUM((od.UnitPrice * od.Quantity) * (1 - od.Discount)) AS TotalSold FROM [Orde
+2025-11-28 03:11:25,266 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-11-28 03:11:25,282 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-11-28 03:11:25,298 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-11-28 03:11:25,579 - root - ERROR - Validation failed: near "BETWE": syntax error
+2025-11-28 03:11:25,579 - __main__ - INFO -   [1/10] [FAIL]: During Summer Beverages 1997 (June 1-30), which pr...
+2025-11-28 03:12:12,696 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"
+2025-11-28 03:12:14,774 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-11-28 03:12:14,789 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-11-28 03:12:14,796 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-11-28 03:12:14,821 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-11-28 03:12:14,823 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-11-28 03:12:14,846 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-11-28 03:13:41,729 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"
+2025-11-28 03:14:41,895 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"
+2025-11-28 03:14:43,925 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-11-28 03:14:43,935 - agent.dspy_signatures - INFO - [Attempt 1/3] Generated SQL: SELECT AVG((od.UnitPrice * od.Quantity) * (1 - od.Discount)) AS AverageOrderValue FROM [Orders] o JO
+2025-11-28 03:14:43,940 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-11-28 03:14:43,953 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-11-28 03:14:43,966 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-11-28 03:14:43,979 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-11-28 03:14:47,115 - __main__ - INFO -   [2/10] [OK]: What was the Average Order Value during Winter 199...
+2025-11-28 03:16:35,277 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"
+2025-11-28 03:16:37,354 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-11-28 03:16:37,356 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-11-28 03:16:37,380 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-11-28 03:16:37,385 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-11-28 03:16:37,407 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-11-28 03:16:37,424 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-11-28 03:17:19,164 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"
+2025-11-28 03:17:21,211 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-11-28 03:17:21,212 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-11-28 03:17:21,218 - agent.dspy_signatures - INFO - [Attempt 1/3] Generated SQL: SELECT p.ProductID, p.ProductName, SUM((od.UnitPrice * od.Quantity) * (1 - od.Discount)) AS TotalRev
+2025-11-28 03:17:21,234 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-11-28 03:17:21,250 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-11-28 03:17:21,270 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-11-28 03:17:21,924 - __main__ - INFO -   [3/10] [OK]: Top 3 products by total revenue all-time....
+2025-11-28 03:18:53,069 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"
+2025-11-28 03:18:55,152 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-11-28 03:18:55,174 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-11-28 03:18:55,190 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-11-28 03:18:55,207 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-11-28 03:18:55,234 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-11-28 03:18:55,267 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-11-28 03:19:54,235 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"
+2025-11-28 03:19:56,317 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-11-28 03:19:56,317 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-11-28 03:19:56,323 - agent.dspy_signatures - INFO - [Attempt 1/3] Generated SQL: SELECT SUM((od.UnitPrice * od.Quantity) * (1 - od.Discount)) AS TotalRevenue FROM [Orders] o JOIN [O
+2025-11-28 03:19:56,326 - root - ERROR - Validation failed: near "BETWEWEN": syntax error
+2025-11-28 03:19:56,327 - __main__ - INFO -   [4/10] [FAIL]: Total revenue from Beverages category during Summe...
+2025-11-28 03:19:56,343 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-11-28 03:19:56,371 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-11-28 03:19:56,390 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-11-28 03:21:28,384 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"
+2025-11-28 03:21:30,464 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-11-28 03:21:30,465 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-11-28 03:21:30,490 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-11-28 03:21:30,491 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-11-28 03:21:30,510 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-11-28 03:21:30,527 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-11-28 03:22:28,125 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"
+2025-11-28 03:22:30,183 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-11-28 03:22:30,183 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-11-28 03:22:30,192 - agent.dspy_signatures - INFO - [Attempt 1/3] Generated SQL: SELECT od.CustomerID, SUM((od.UnitPrice * 0.30) * od.Quantity * (1 - od.Discount)) AS GrossMargin FR
+2025-11-28 03:22:30,195 - root - ERROR - Validation failed: no such column: od.CustomerID
+2025-11-28 03:22:30,195 - __main__ - INFO -   [5/10] [FAIL]: Top customer by gross margin in 1997. Margin = SUM...
+2025-11-28 03:22:30,214 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-11-28 03:22:30,248 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-11-28 03:22:30,275 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-11-28 03:24:03,982 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"
+2025-11-28 03:24:06,078 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-11-28 03:24:06,092 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-11-28 03:24:06,108 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-11-28 03:24:06,114 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-11-28 03:24:06,132 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-11-28 03:24:06,149 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-11-28 03:24:52,672 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"
+2025-11-28 03:24:54,749 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-11-28 03:24:54,751 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-11-28 03:24:54,753 - agent.dspy_signatures - INFO - [Attempt 1/3] Generated SQL: SELECT COUNT(DISTINCT o.OrderID) AS NumberOfOrders FROM Orders o JOIN Order Details od ON o.OrderID 
+2025-11-28 03:24:54,754 - root - ERROR - Validation failed: near "Order": syntax error
+2025-11-28 03:24:54,755 - __main__ - INFO -   [6/10] [FAIL]: How many orders were placed in June 1997?...
+2025-11-28 03:24:54,772 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-11-28 03:24:54,801 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-11-28 03:24:54,826 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-11-28 03:25:49,225 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"
+2025-11-28 03:25:51,589 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-11-28 03:25:51,589 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-11-28 03:25:51,612 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-11-28 03:25:51,616 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-11-28 03:25:51,635 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-11-28 03:25:51,652 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-11-28 03:26:23,343 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"
+2025-11-28 03:26:25,425 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-11-28 03:26:25,427 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-11-28 03:26:25,433 - agent.dspy_signatures - INFO - [Attempt 1/3] Generated SQL: SELECT p.ProductName, c.CategoryName FROM [Products] AS p JOIN [Categories] AS c ON p.CategoryID = c
+2025-11-28 03:26:25,434 - __main__ - INFO -   [7/10] [OK]: List all Beverages products....
+2025-11-28 03:26:25,447 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-11-28 03:26:25,485 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-11-28 03:26:25,503 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-11-28 03:27:42,046 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"
+2025-11-28 03:27:44,103 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-11-28 03:27:44,113 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-11-28 03:27:44,131 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-11-28 03:27:44,145 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-11-28 03:27:44,152 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-11-28 03:27:44,171 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-11-28 03:28:22,099 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"
+2025-11-28 03:28:24,192 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-11-28 03:28:24,194 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-11-28 03:28:24,199 - agent.dspy_signatures - INFO - [Attempt 1/3] Generated SQL: SELECT SUM((od.Quantity * (1 - od.Discount))) AS TotalSold FROM Orders o JOIN [Order Details] od ON 
+2025-11-28 03:28:24,213 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-11-28 03:28:24,233 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-11-28 03:28:24,254 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-11-28 03:28:24,269 - __main__ - INFO -   [8/10] [OK]: Total quantity sold across all orders....
+2025-11-28 03:30:04,452 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"
+2025-11-28 03:30:06,524 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-11-28 03:30:06,538 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-11-28 03:30:06,551 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-11-28 03:30:06,562 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-11-28 03:30:06,587 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-11-28 03:30:06,609 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-11-28 03:30:50,764 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"
+2025-11-28 03:30:52,818 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-11-28 03:30:52,829 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-11-28 03:30:52,836 - agent.dspy_signatures - INFO - [Attempt 1/3] Generated SQL: SELECT c.CategoryName, AVG((od.Discount * od.UnitPrice) / (1 - od.Discount)) AS AvgDiscount FROM [Or
+2025-11-28 03:30:52,846 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-11-28 03:30:52,866 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-11-28 03:30:52,882 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-11-28 03:30:53,384 - __main__ - INFO -   [9/10] [OK]: Average discount by category....
+2025-11-28 03:32:04,167 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"
+2025-11-28 03:32:06,243 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-11-28 03:32:06,245 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-11-28 03:32:06,266 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-11-28 03:32:06,267 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-11-28 03:32:06,290 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-11-28 03:32:06,308 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-11-28 03:32:37,711 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"
+2025-11-28 03:32:39,802 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-11-28 03:32:39,809 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-11-28 03:32:39,813 - agent.dspy_signatures - INFO - [Attempt 1/3] Generated SQL: SELECT od.ProductID, p.ProductName, c.CategoryName
+2025-11-28 03:32:39,815 - root - ERROR - Validation failed: no such column: od.ProductID
+2025-11-28 03:32:39,815 - __main__ - INFO -   [10/10] [FAIL]: Which products had zero discount?...
+2025-11-28 03:32:39,815 - __main__ - INFO - 
+BEFORE - Valid SQL Rate: 50.0% (5/10)
+2025-11-28 03:32:39,816 - __main__ - INFO - 
+================================================================================
+2025-11-28 03:32:39,816 - __main__ - INFO - OPTIMIZING: BootstrapFewShot with Training Examples
+2025-11-28 03:32:39,816 - __main__ - INFO - ================================================================================
+2025-11-28 03:32:39,817 - __main__ - INFO - Running optimization (this may take 3-5 minutes)...
+2025-11-28 03:32:39,828 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-11-28 03:32:39,850 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-11-28 03:32:39,868 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-11-28 03:34:22,647 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"
+2025-11-28 03:34:24,740 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-11-28 03:34:24,752 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-11-28 03:34:24,757 - agent.dspy_signatures - INFO - [Attempt 1/3] Generated SQL: SELECT c.CategoryName, SUM(od.Quantity) AS TotalSold FROM [Order Details] od JOIN Products p ON od.P
+2025-11-28 03:34:24,760 - root - ERROR - Validation failed: near "BETWEDIR": syntax error
+2025-11-28 03:34:24,769 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-11-28 03:34:24,797 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-11-28 03:34:24,842 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-11-28 03:35:48,345 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"
+2025-11-28 03:35:50,449 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-11-28 03:35:50,450 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-11-28 03:35:50,454 - agent.dspy_signatures - INFO - [Attempt 1/3] Generated SQL: SELECT ROUND(AVG(OrderValue), 2) AS AvgOrderValue FROM ( SELECT o.OrderID, SUM(od.UnitPrice * od.Qua
+2025-11-28 03:35:50,479 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-11-28 03:35:50,497 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-11-28 03:35:50,511 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-11-28 03:37:06,110 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"
+2025-11-28 03:37:08,187 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-11-28 03:37:08,188 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-11-28 03:37:08,196 - agent.dspy_signatures - INFO - [Attempt 1/3] Generated SQL: SELECT p.ProductName, SUM(od.UnitPrice * od.Quantity * (1 - od.Discount)) AS TotalRevenue FROM [Orde
+2025-11-28 03:37:08,206 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-11-28 03:37:08,225 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-11-28 03:37:08,241 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-11-28 03:37:08,619 - __main__ - INFO - [OK] Optimization complete!
+2025-11-28 03:37:08,620 - __main__ - INFO - 
+================================================================================
+2025-11-28 03:37:08,620 - __main__ - INFO - AFTER: Optimized NL2SQL Module
+2025-11-28 03:37:08,620 - __main__ - INFO - ================================================================================
+2025-11-28 03:40:08,274 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"
+2025-11-28 03:40:10,341 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-11-28 03:40:10,354 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-11-28 03:40:10,356 - agent.dspy_signatures - INFO - [Attempt 1/3] Generated SQL: SELECT c.CategoryName, SUM(od.Quantity) AS TotalSold FROM [Order Details] od JOIN Products p ON od.P
+2025-11-28 03:40:10,356 - root - ERROR - Validation failed: near "BETWE": syntax error
+2025-11-28 03:40:10,357 - __main__ - INFO -   [1/10] [FAIL]: During Summer Beverages 1997 (June 1-30), which pr...
+2025-11-28 03:40:10,370 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-11-28 03:40:10,394 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-11-28 03:40:10,408 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-11-28 03:42:07,703 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"
+2025-11-28 03:42:09,775 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-11-28 03:42:09,777 - agent.dspy_signatures - INFO - [Attempt 1/3] Generated SQL: SELECT AVG(TotalRevenue) AS AverageOrderValue FROM ( SELECT o.CustomerID, SUM((od.UnitPrice * od.Qua
+2025-11-28 03:42:09,777 - root - ERROR - Validation failed: near "Order": syntax error
+2025-11-28 03:42:09,778 - __main__ - INFO -   [2/10] [FAIL]: What was the Average Order Value during Winter 199...
+2025-11-28 03:42:09,786 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-11-28 03:42:09,812 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-11-28 03:42:09,857 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-11-28 03:42:09,874 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-11-28 03:45:12,192 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"
+2025-11-28 03:45:14,280 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-11-28 03:45:14,281 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-11-28 03:45:14,285 - agent.dspy_signatures - INFO - [Attempt 1/3] Generated SQL: SELECT p.ProductName, SUM(od.UnitPrice * od.Quantity * (1 - COALESCE(od.Discount, 0))) AS TotalReven
+2025-11-28 03:45:14,287 - root - ERROR - Validation failed: no such table: OrderDetails
+2025-11-28 03:45:14,288 - __main__ - INFO -   [3/10] [FAIL]: Top 3 products by total revenue all-time....
+2025-11-28 03:45:14,307 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-11-28 03:45:14,443 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
+2025-11-28 03:45:14,479 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/show "HTTP/1.1 200 OK"
